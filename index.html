@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Internship Board</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#results">Skip to internships</a>
+<header class="top">
+  <h1>Internship Board</h1>
+  <p>Find an internship by role, company, or skill.</p>
+</header>
+<main>
+  <form class="filters" role="search" aria-label="Filter internships" onsubmit="return false">
+    <div class="field">
+      <label for="search">Search</label>
+      <input id="search" type="search" placeholder="e.g. React, Chennai, design" autocomplete="off">
+    </div>
+    <div class="field">
+      <label for="domain">Domain</label>
+      <select id="domain"><option value="all">All domains</option></select>
+    </div>
+    <button type="button" id="reset">Clear filters</button>
+  </form>
+  <p id="count" role="status" aria-live="polite"></p>
+  <section id="results" class="grid" aria-label="Internship listings" tabindex="-1"></section>
+  <div id="message" class="message" hidden></div>
+</main>
+<script src="app.js"></script>
+</body>
+</html>

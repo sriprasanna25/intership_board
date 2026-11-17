@@ -1,0 +1,30 @@
+:root{--bg:#f6f7fb;--card:#fff;--ink:#1c2233;--muted:#5a6275;--brand:#3b4cca;--line:#d9dde8}
+*{box-sizing:border-box}
+body{margin:0;font:1rem/1.5 system-ui,sans-serif;background:var(--bg);color:var(--ink)}
+.skip{position:absolute;left:-999px}
+.skip:focus{left:1rem;top:1rem;background:#fff;padding:.5rem 1rem;z-index:9}
+.top{padding:2rem 1rem 1rem;max-width:72rem;margin:auto}
+.top h1{margin:0 0 .25rem;font-size:clamp(1.6rem,4vw,2.4rem)}
+.top p{margin:0;color:var(--muted)}
+main{max-width:72rem;margin:auto;padding:0 1rem 3rem}
+.filters{display:grid;gap:1rem;grid-template-columns:1fr;align-items:end;background:var(--card);border:1px solid var(--line);border-radius:.75rem;padding:1rem}
+.field{display:flex;flex-direction:column;gap:.25rem}
+label{font-weight:600}
+input,select,button{font:inherit;padding:.6rem .75rem;border:1px solid var(--line);border-radius:.5rem;background:#fff;color:var(--ink)}
+button{background:var(--brand);color:#fff;border-color:var(--brand);cursor:pointer;font-weight:600}
+button:hover{filter:brightness(1.1)}
+:focus-visible{outline:3px solid #f5a524;outline-offset:2px}
+#count{color:var(--muted);margin:1rem 0 .5rem}
+.grid{display:grid;gap:1rem;grid-template-columns:1fr}
+.card{background:var(--card);border:1px solid var(--line);border-radius:.75rem;padding:1rem;display:flex;flex-direction:column;gap:.4rem}
+.card h2{font-size:1.1rem;margin:0}
+.card .co{color:var(--muted);margin:0}
+.tag{display:inline-block;background:#e8ebfb;color:#27339a;border-radius:99px;padding:.1rem .6rem;font-size:.85rem}
+.skills{display:flex;flex-wrap:wrap;gap:.35rem;padding:0;margin:.25rem 0;list-style:none}
+.skills li{border:1px solid var(--line);border-radius:.4rem;padding:.05rem .5rem;font-size:.85rem}
+.card a{margin-top:auto;color:var(--brand);font-weight:600}
+.message{background:#fff;border:1px dashed var(--line);border-radius:.75rem;padding:2rem;text-align:center}
+.message.error{border-color:#c0392b;color:#8e2418}
+@media(min-width:40rem){.grid{grid-template-columns:repeat(2,1fr)}.filters{grid-template-columns:2fr 1fr auto}}
+@media(min-width:64rem){.grid{grid-template-columns:repeat(3,1fr)}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
